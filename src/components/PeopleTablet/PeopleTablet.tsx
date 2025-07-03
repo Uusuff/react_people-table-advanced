@@ -9,7 +9,7 @@ type Props = {
   person?: string;
 };
 
-export const PeopleTable: React.FC<Props> = ({ people, person }) => {
+export const PeopleTablet: React.FC<Props> = ({ people, person }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const sortField = searchParams.get('sort');

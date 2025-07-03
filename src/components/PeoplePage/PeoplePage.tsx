@@ -4,7 +4,7 @@ import { getPeople } from '../../api';
 import { Person } from '../../types';
 import { PeopleFilters } from '../PeopleFilters/PeopleFilters';
 import { Loader } from '../Loader/Loader';
-import { PeopleTable } from '../PeopleTablet/PeopleTable';
+import { PeopleTablet } from '../PeopleTablet/PeopleTablet';
 import { filterAndSortPeople } from '../../utils/peopleFilter';
 
 export const PeoplePage = () => {
@@ -77,7 +77,10 @@ export const PeoplePage = () => {
               )}
 
               {!loading && !error && filteredAndSortedPeople.length > 0 && (
-                <PeopleTable people={filteredAndSortedPeople} person={person} />
+                <PeopleTablet
+                  people={filteredAndSortedPeople}
+                  person={person}
+                />
               )}
             </div>
           </div>
